@@ -1,5 +1,22 @@
 html {
   box-sizing: border-box;
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    hsl(197deg 93% 29%) 0%,
+    hsl(194deg 93% 30%) 22%,
+    hsl(191deg 94% 31%) 39%,
+    hsl(187deg 95% 32%) 52%,
+    hsl(184deg 95% 33%) 62%,
+    hsl(181deg 95% 34%) 70%,
+    hsl(177deg 97% 35%) 77%,
+    hsl(174deg 97% 36%) 84%,
+    hsl(171deg 98% 37%) 91%,
+    hsl(167deg 98% 39%) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 *, *::after, *::before {

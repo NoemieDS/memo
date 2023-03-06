@@ -1,0 +1,27 @@
+body {
+  width: 100vw;
+position: absolute;
+  margin: 0 auto;
+}
+
+
+.Appli {
+  position: relative;
+  height: 100vh;
+  top: 0;
+  overflow: hidden;
+
+
+main {
+overflow: scroll;
+width: 100%;
+height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+  
+}
+
