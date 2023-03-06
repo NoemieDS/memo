@@ -4,7 +4,7 @@ export default function Tache() {
 
   return(
     <article className="Tache">
-        <h4>Une tache</h4>
+      <h4>Une tâche</h4>
       </article>
   ) 
 }

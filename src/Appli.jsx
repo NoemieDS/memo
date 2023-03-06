@@ -16,7 +16,6 @@ export default function Appli() {
       </div>
       <div className="defiler">
       <ListeTaches />
-
       </div>
       <Operations />
       </main>

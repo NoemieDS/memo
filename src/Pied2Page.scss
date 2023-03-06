@@ -2,7 +2,11 @@
   width: 100%;
   position: fixed;
   bottom: 0vh;
-  height: 2vh;
+  height: 5vh;
   background-color: aqua;
   text-align: center;
+
+  p {
+    padding-bottom: 2rem;
+  }
 }
