@@ -9,9 +9,15 @@ export default function Appli() {
   return (
     <div className="Appli">
       <Entete />
-      <main>
+  <main className="contenu-principal">
       <FrmTache />
+      <div className="titre-liste-taches">
+        <h3>La liste des taches</h3>
+      </div>
+      <div className="defiler">
       <ListeTaches />
+
+      </div>
       <Operations />
       </main>
       <Pied2Page />

@@ -1,5 +1,10 @@
 .Operations {
+  /*Débute en haut du pied de page */
+  width: 100%;
+  position: fixed;
+  bottom: 2vh;
+  height: 12vh;
+  background-color: aqua;
   text-transform: uppercase;
-  position: absolute;
-  bottom: 10vh;
+  text-align: center;
 }

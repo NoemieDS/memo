@@ -5,14 +5,20 @@ position: absolute;
 }
 
 
-.Appli {
+.Appli,
+.contenu-principal {
   position: relative;
+  width: 100%;
   height: 100vh;
   top: 0;
   overflow: hidden;
 
+  .titre-liste-taches {
+    text-align: center;
+  }
 
-main {
+
+div.defiler {
 overflow: scroll;
 width: 100%;
 height: 100%;
@@ -20,8 +26,7 @@ height: 100%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
 }
-  
+
 }
 
