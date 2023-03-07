@@ -4,7 +4,7 @@ export default function Pied2Page() {
 
   return(
     <footer className="Pied2Page">
-        &copy; {new Date().getFullYear()} - Tous droits réservés - 4PA - TIM
+        {/* &copy; */} {new Date().getFullYear()} - Noémie da Silva - 4PA - TIM
       </footer>
   ) 
 }

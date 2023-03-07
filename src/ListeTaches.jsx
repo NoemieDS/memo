@@ -17,6 +17,15 @@ export default function ListeTaches() {
         <Tache />
         <Tache />   
         <Tache />
+        <Tache />
+        <Tache />
+        <Tache />
+        <Tache />
+        <Tache />
+        <Tache />
+        <Tache />
+        <Tache />   
+        <Tache />
 
       </section>
   ); 
