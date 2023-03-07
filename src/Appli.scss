@@ -4,19 +4,25 @@ body {
   margin: 0 auto;
 }
 
-.Appli,
+/* .Appli, */
 .contenu-principal {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   top: 0;
   overflow: hidden;
 
-  .titre-liste-taches {
+/*   .titre-liste-taches {
     text-align: center;
-  }
+    font-size: clamp(0.8rem, -0.0385rem + 3vw, 2.6rem);
+    /*débute après le formulaire /*
+    position: relative;
+    top: 9vh;
+  } */
 
   div.defiler {
+    position:relative;
+    top: 12vh;
     overflow: scroll;
     width: 100%;
     height: 100%;
@@ -25,5 +31,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 2rem 2rem;
   }
 }

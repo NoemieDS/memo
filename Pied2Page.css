@@ -1,4 +1,11 @@
 .Pied2Page {
+  width: 100%;
+  position: fixed;
+  bottom: 0vh;
+  height: 5vh;
   background-color: aqua;
-  height: 200px;
+  text-align: center;
+}
+.Pied2Page p {
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=Pied2Page.css.map */
