@@ -3,12 +3,20 @@ import IconButton from "@mui/material/IconButton";
 import ClearIcon from "@mui/icons-material/Clear";
 import CheckSharpIcon from "@mui/icons-material/CheckSharp";
 
-export default function Memo(date) {
+export default function Memo({memos, setMemos}) {
+
+ /*
+ **************************  Fonction pour ajouter un mémo au tableau des mémos
+*/
+/* console.log("Recu du FrmMemo : ", setMemo) */
+
+
+
   return (
     <article className="Memo">
       <div className="memo-haut">
         <p className="memo-date">
-          {new Date(date).toLocaleDateString("fr-CA", { dateStyle: "long" })}
+        {/*   {new Date(date).toLocaleDateString("fr-CA", { dateStyle: "long" })} */}
         </p>
         <IconButton
           onClick={() => completerMemo(id)}
