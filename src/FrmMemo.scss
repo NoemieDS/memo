@@ -1,11 +1,11 @@
-.FrmTache {
+.FrmMemo {
 position: relative;
 top: 13vh;
   background-color: transparent;
-  height: 80px;
-  padding-bottom: 1.6rem;
+  padding-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: hsl(218deg, 17%, 32%) 0.1em 0.1em 0.2em;
+  box-shadow: 10px 4px 5px rgba(33, 33, 33, 0.7);
+
 }
