@@ -8,4 +8,24 @@ top: 13vh;
   align-items: center;
   box-shadow: 10px 4px 5px rgba(33, 33, 33, 0.7);
 
+  #frmMemo {
+    min-width: 300px;
+  }
+
+  #input-memo[type=text]{
+    width: 80vw;
+    height: 3em;
+    }
+
+    #input-memo:focus {
+      border: 2px dotted pink;
+      
+    }
+
+
+input:focus {
+  outline: none !important;
+  border:1px solid red;
+  box-shadow: 0 0 10px #719ECE;
+}
 }
