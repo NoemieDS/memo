@@ -1,6 +1,7 @@
 .FrmMemo {
-position: relative;
-top: 13vh;
+  position: relative;
+  /*Est positionnée après l'entête */
+  top: 10vh;
   background-color: transparent;
   padding: 1rem;
   display: flex;
@@ -8,24 +9,66 @@ top: 13vh;
   align-items: center;
   box-shadow: 10px 4px 5px rgba(33, 33, 33, 0.7);
 
-  #frmMemo {
-    min-width: 300px;
+  #input-memo[type="text"] {
+    width: 65vw;
+    height: 3em;
+    padding-left: 1.2rem;
   }
 
-  #input-memo[type=text]{
-    width: 80vw;
-    height: 3em;
+  #input-memo:focus {
+    border: 3px dotted #125b6a;
+  }
+
+  input:focus {
+    outline: none !important;
+    border: 1px solid #125b6a;
+    box-shadow: 0 0 10px #719ece;
+  }
+
+  .frm-memo-bouton {
+    margin-top: 0.4rem;
+    margin-left: 1rem;
+    padding: 0.6rem 1rem 0.6rem;
+    outline: 0;
+    border: 1px solid #125b6a;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-weight: bolder;
+  }
+
+  .frm-memo-bouton:after {
+    content: "";
+    background-color: #fde360;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 200ms;
+  }
+
+  .frm-memo-bouton:hover:after {
+    top: 0px;
+    left: 0px;
+  }
+
+  @media screen and (min-width: 992px) {
+    #input-memo[type="text"] {
+      width: 60vw;
     }
-
-    #input-memo:focus {
-      border: 2px dotted pink;
-      
+    .frm-memo-bouton {
+      display: none;
     }
+  }
 
-
-input:focus {
-  outline: none !important;
-  border:1px solid red;
-  box-shadow: 0 0 10px #719ECE;
-}
+  @media screen and (min-width: 1400px) {
+    #input-memo[type="text"] {
+      width: 40vw;
+    }
+  }
 }

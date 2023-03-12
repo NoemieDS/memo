@@ -4,9 +4,9 @@
   position: fixed;
   top: 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 0.6rem 0 0.4rem;
+  padding: 1rem 4rem;
 
   h1 {
     font-size: clamp(1.4rem, -0.0385rem + 3vw, 2.6rem);
@@ -18,5 +18,10 @@
     width: 60px;
     max-width: 100%;
     height: auto;
+  }
+
+  
+  @media screen and (min-width: 992px) {
+    justify-content: space-evenly;
   }
 }

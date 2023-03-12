@@ -2,7 +2,7 @@ import "./Appli.scss";
 import Entete from "./Entete";
 import FrmMemo from "./FrmMemo";
 import ListeMemos from "./ListeMemos";
-import Operations from "./Operations";
+import Filtres from "./Filtres";
 import Pied2Page from "./Pied2Page";
 import { useEffect, useState } from 'react';
 
@@ -27,10 +27,10 @@ const [memos, setMemos] = useState(
       <Entete />
   <main className="contenu-principal">
       <FrmMemo  memos={memos} setMemos={setMemos} />
+      <Filtres memos={memos} setMemos={setMemos}/>
       <div className="defiler">
       <ListeMemos memos={memos} setMemos={setMemos}/>
       </div>
-      <Operations memos={memos} setMemos={setMemos}/>
       </main>
       <Pied2Page />
     </div>

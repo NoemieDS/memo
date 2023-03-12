@@ -3,32 +3,37 @@ import IconButton from "@mui/material/IconButton";
 import ClearIcon from "@mui/icons-material/Clear";
 import CheckSharpIcon from "@mui/icons-material/CheckSharp";
 
-export default function Memo({memos, setMemos}) {
+export default function Memo({ 
+  id, 
+  date, 
+  texte, 
+  complete,
+  completerMemo,
+  supprimerMemo,
+ }) {
 
- /*
- **************************  Fonction pour ajouter un mémo au tableau des mémos
-*/
-/* console.log("Recu du FrmMemo : ", setMemo) */
 
-
+  /* Variables pour les dates et les heures */
+  const dateM = new Date(date).toLocaleDateString('fr-CA', {dateStyle: 'long',});
+  const heureM = new Date(date).toLocaleTimeString('fr-CA', {hour: '2-digit', minute:'2-digit'})
 
   return (
     <article className="Memo">
       <div className="memo-haut">
         <p className="memo-date">
-        {/*   {new Date(date).toLocaleDateString("fr-CA", { dateStyle: "long" })} */}
+          {dateM} <br/> à {' '} {heureM}
         </p>
         <IconButton
           onClick={() => completerMemo(id)}
-          className="memo-completer"
+          className={complete ? "memo-completer" : "MuiIconButton-root"} 
           aria-label="memo-completer"
           size="small"
         >
           <CheckSharpIcon />
         </IconButton>
       </div>
-      <h4 className="un-memo">
-        Avancer mon TP 1 et intégrer le formulaire aujourd'hui.{" "}
+      <h4 className={complete ? "un-memo memo-completer-vrai" : "un-memo"} >
+        {texte}
       </h4>
       <div className="memo-bas">
         <IconButton

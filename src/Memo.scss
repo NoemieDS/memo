@@ -1,10 +1,8 @@
 .Memo {
   background-color: #eddf9a;
-  height: auto;
+  min-width: 240px;
+  max-width: 90vw;
   border-radius: 1% 20px 1% 20px;
- /*  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px; */
-  /*  border-radius: 1rem 1.5rem 1.25rem; */
   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
   transition: transform 600ms;
   text-shadow: hsl(218deg, 17%, 72%) 0.1em 0.1em 0.2em;
@@ -12,10 +10,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  flex: 1 1 30%;
-  max-width: 300px;
 
-   .memo-haut {
+  .memo-haut {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -23,19 +19,24 @@
     .memo-date {
       font-size: 0.76rem;
     }
- 
- .memo-completer {
-  padding: 0rem;
-    } 
-    .memo-date,
-    .memo-completer,
-    .memo-supprimer {
-      margin: 0.6rem;
+
+    .memo-completer {
       padding: 0rem;
     }
-
+    
+    .memo-completer:hover,
+    .memo-completer:active {
+      color: green;
+    }
   }
-
+  
+  .memo-date,
+  .memo-completer,
+  .memo-supprimer {
+    margin: 0.6rem;
+    padding: 0rem;
+  }
+  
   .un-memo {
     margin: 0.8rem 1.4rem;
     width: 90%;
@@ -44,16 +45,37 @@
     padding: 1rem 1rem 1.6rem 1rem;
     border-radius: 1% 10px 1% 10px;
     box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.7);
+    white-space: pre-wrap;
+    word-wrap: break-word;
 
     @media screen and (min-width: 992px) {
       padding: 1.8rem 1.8rem 2.2rem 1.8rem;
-    } 
+    }
   }
 
   .memo-bas {
     width: 100%;
     display: flex;
     justify-content: flex-start;
+
+    .memo-supprimer:hover,
+    .memo-supprimer:active {
+      color: red;
+    }
+  }
+
+  .memo-completer-vrai {
+
+    color: rgba(0, 128, 0, 0.5);
+    text-decoration: line-through;
+  }
+  
+  .MuiIconButton-root {
+    color: green !important;
+   } 
+   
+  @media screen and (min-width: 992px) {
+    max-width: 20vw;
   }
 }
 
