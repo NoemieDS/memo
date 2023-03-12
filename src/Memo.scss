@@ -70,7 +70,7 @@
     text-decoration: line-through;
   }
   
-  .MuiIconButton-root {
+  .MuiIconButton-root:not(.memo-supprimer) {
     color: green !important;
    } 
    
