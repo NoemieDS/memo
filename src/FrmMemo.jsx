@@ -57,7 +57,7 @@ export default function FrmMemo({ memos, setMemos }) {
           name="input-memo"
           autoFocus
           autoComplete="off"
-          placeholder="Je veux me rappeller de..."
+          placeholder="Je veux me rappeler de..."
           size="30"
           onChange={(evt) => setTexte(evt.target.value)}
         ></input>
