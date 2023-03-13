@@ -2,7 +2,7 @@
   background-color: #eddf9a;
   min-width: 240px;
   max-width: 90vw;
-  border-radius: 1% 20px 1% 20px;
+  border-radius: 1% 20px;
   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
   transition: transform 600ms;
   text-shadow: hsl(218deg, 17%, 72%) 0.1em 0.1em 0.2em;
@@ -22,11 +22,18 @@
 
     .memo-completer {
       padding: 0rem;
+      opacity: 1;
     }
     
     .memo-completer:hover,
     .memo-completer:active {
       color: green;
+    }
+
+    .memo-completer-masquer-bouton {
+      color: green;
+      transition: opacity 1s;
+      opacity: 0;
     }
   }
   

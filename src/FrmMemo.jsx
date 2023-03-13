@@ -1,7 +1,6 @@
 import "./FrmMemo.scss";
 import Memo from "./Memo";
 import { useState } from "react";
-
 export default function FrmMemo({ memos, setMemos }) {
 
   const [texte, setTexte] = useState("");
@@ -44,6 +43,7 @@ export default function FrmMemo({ memos, setMemos }) {
     evt.target.reset();
   }
 
+
   return (
     <section className="FrmMemo">
       <form onSubmit={ajouterMemo} id="frmMemo">
@@ -59,7 +59,8 @@ export default function FrmMemo({ memos, setMemos }) {
           onChange={(evt) => setTexte(evt.target.value)}
         ></input>
         <button
-          className="frm-memo-bouton"
+          className={
+          "frm-memo-bouton frm-memo-bouton-anim" }
           type="submit"
           form="frmMemo"
           value="Submit"

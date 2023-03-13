@@ -6,12 +6,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
+  padding: 0.6rem 4rem;
 
   h1 {
-    font-size: clamp(1.4rem, -0.0385rem + 3vw, 2.6rem);
+    font-size: clamp(1.3rem, -0.0385rem + 3vw, 2.6rem);
     text-transform: uppercase;
     text-shadow: hsl(218deg, 17%, 22%) 0.06em 0.06em 0.06em;
+    margin-top: 1.4rem;
   }
 
   img {

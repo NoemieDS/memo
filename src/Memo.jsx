@@ -26,7 +26,7 @@ export default function Memo({
         </p>
         <IconButton
           onClick={() => completerMemo(id)}
-          className={complete ? "MuiIconButton-root" : "memo-completer"} //Ne fonctionne pas, MUI suit pas condition
+          className={complete ? "memo-completer-masquer-bouton" : "memo-completer"} //Ne fonctionne pas, MUI suit pas condition
           aria-label="memo-completer"
           size="small"
         >

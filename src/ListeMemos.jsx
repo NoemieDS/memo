@@ -48,7 +48,7 @@ export default function ListeMemos({ memos, setMemos }) {
     </section>
   ) : (
     <div>
-      <p>Aucun mémo !</p>
+      <h2>Aucun mémo !</h2>
     </div>
   );
 }
