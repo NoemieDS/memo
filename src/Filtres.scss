@@ -3,9 +3,55 @@
   width: 100%;
   position: fixed;
   bottom: 4vh;
-  height: 12vh;
+  height: 13vh;
   background-color: #125b6a;
   text-align: center;
-  text-shadow: hsl(218deg, 17%, 32%) 0.1em 0.1em 0.2em;
+  text-shadow: hsl(215, 16%, 21%) 0.1em 0.1em 0.2em;
   color:#f2e9d8;
+
+
+ h5 {
+  margin: 0.1rem;
+  padding-top: 0.2rem;
+ }
+  
+
+  .filtre-bouton {
+   /* background-color:#028090; */
+   /* color: black; */
+   font-weight: bold;
+   font-size: 0.6rem;
+   text-shadow: hsl(215, 16%, 21%) 0.1em 0.1em 0.2em;
+   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+   margin: 0.2rem 0.3rem;
+   padding: 0.16rem;
+  }
+
+  .filtre-supprimer {
+    background-color:rgb(177, 7, 7);
+    color: #f2e9d8;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.12rem;
+  }
+
+  .filtre-supprimer:hover {
+    background-color: rgb(187, 114, 114);
+  }
+
+  @media screen and (min-width: 992px) {
+    h5 {
+      font-size: 1.2rem;
+      margin: 0.4rem 0 0.8rem 0;
+     }
+     .filtre-bouton {
+      font-size: 0.8rem;
+      margin: 0 0.4rem 0.4rem 0.4rem;
+      padding: 0.6rem;
+     }
+     .filtre-supprimer {
+      display: inline;
+     }
+      
+  }
 }

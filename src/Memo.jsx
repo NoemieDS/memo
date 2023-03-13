@@ -25,14 +25,14 @@ export default function Memo({
         </p>
         <IconButton
           onClick={() => completerMemo(id)}
-          className={complete ? "memo-completer" : "MuiIconButton-root"} 
+          className={complete ? "MuiIconButton-root" : "memo-completer"} //Ne fonctionne pas, MUI suit pas condition
           aria-label="memo-completer"
           size="small"
         >
           <CheckSharpIcon />
         </IconButton>
       </div>
-      <h4 className={complete ? "un-memo memo-completer-vrai" : "un-memo"} >
+      <h4 className={complete ? "un-memo memo-completer-texte" : "un-memo"} >
         {texte}
       </h4>
       <div className="memo-bas">

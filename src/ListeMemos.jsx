@@ -1,13 +1,15 @@
 import "./ListeMemos.scss";
 import Memo from "./Memo";
+
+
 export default function ListeMemos({ memos, setMemos }) {
+
   /**
    * Supprime un mémo de la collection de mémos
    *
    * @param string id : identifiant du mémo
    * return void
    */
-
   function supprimerMemo(idd) {
     setMemos(memos.filter((memo) => memo.id !== idd));
   }
@@ -18,7 +20,6 @@ export default function ListeMemos({ memos, setMemos }) {
    * @param string id : identifiant du mémo
    * return memo
    */
-
   function completerMemo(id, texte, timestamp, complete) {
     setMemos(
       memos.map((memo) => {
@@ -35,6 +36,21 @@ export default function ListeMemos({ memos, setMemos }) {
       })
     );
   }
+
+  /***************************************FILTRES***************************** */
+
+  /**
+   * Basculer un mémo compléter à "true"
+   *
+   * @param string id : identifiant du mémo
+   * return memo
+   */
+ /*  function afficherTout(id, texte, timestamp, complete) {
+    setMemos(
+      memos.map((memo) =>
+  }
+ */
+
 
   return memos.length > 0 ? (
     <section className="ListeMemos">

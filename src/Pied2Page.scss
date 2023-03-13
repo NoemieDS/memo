@@ -7,5 +7,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: hsl(218deg, 17%, 42%) 0.1em 0.1em 0.2em
+  text-shadow: hsl(218deg, 17%, 42%) 0.1em 0.1em 0.2em;
+  font-size: 0.8rem;
+
+  @media screen and (min-width: 992px) {
+    font-size: 0.9rem;
+  }
 }

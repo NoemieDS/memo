@@ -1,7 +1,5 @@
 import "./FrmMemo.scss";
 import Memo from "./Memo";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import { useState } from "react";
 
 export default function FrmMemo({ memos, setMemos }) {

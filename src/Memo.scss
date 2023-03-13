@@ -38,7 +38,7 @@
   }
   
   .un-memo {
-    margin: 0.8rem 1.4rem;
+    margin: 0.2rem 1.4rem;
     width: 90%;
     background-color: #f2e9d8;
     text-align: center;
@@ -64,19 +64,15 @@
     }
   }
 
-  .memo-completer-vrai {
-
+  .memo-completer-texte {
     color: rgba(0, 128, 0, 0.5);
     text-decoration: line-through;
   }
   
-  .MuiIconButton-root:not(.memo-supprimer) {
+/*   .MuiIconButton-root:not(.memo-supprimer) {
     color: green !important;
-   } 
+   }  */
    
-  @media screen and (min-width: 992px) {
-    max-width: 20vw;
-  }
 }
 
 .Memo:hover,
