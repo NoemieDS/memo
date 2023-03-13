@@ -20,7 +20,8 @@ export default function Memo({
   return (
     <article className="Memo">
       <div className="memo-haut">
-        <p className="memo-date">
+        <p className={complete ? "memo-date memo-completer-texte" : "memo-date"} >
+
           {dateM} <br/> à {' '} {heureM}
         </p>
         <IconButton

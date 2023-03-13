@@ -20,6 +20,10 @@ const [memos, setMemos] = useState(
     , [memos]
 
     );
+
+  const [filtre, setFiltre] = useState("tout");
+  
+  
    
 
   return (
@@ -27,9 +31,9 @@ const [memos, setMemos] = useState(
       <Entete />
   <main className="contenu-principal">
       <FrmMemo  memos={memos} setMemos={setMemos} />
-      <Filtres memos={memos} setMemos={setMemos}/>
+      <Filtres memos={memos} setMemos={setMemos} />
       <div className="defiler">
-      <ListeMemos memos={memos} setMemos={setMemos}/>
+      <ListeMemos memos={memos} setMemos={setMemos} />
       </div>
       </main>
       <Pied2Page />

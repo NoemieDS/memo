@@ -1,7 +1,7 @@
 import "./Filtres.scss";
 import Button from "@mui/material/Button";
 
-export default function Filtres(id, date, texte, complete, memos, setMemos, afficherTout) {
+export default function Filtres({id, date, texte, complete, memos, setMemos}) {
 
   var nbTache = 0; //utiliser filter ?
   var nbTacheTexte = "";
@@ -16,6 +16,11 @@ export default function Filtres(id, date, texte, complete, memos, setMemos, affi
     return nbTacheTexte;
   }
 
+  function supprimerCompletes() {
+    alert("cliqué");
+  }
+
+
   return (
     <section className="Filtres">
       <h5>
@@ -26,9 +31,9 @@ export default function Filtres(id, date, texte, complete, memos, setMemos, affi
         className="filtre-bouton"
           aria-label="afficher-tout"
           size="small"
-         onClick={() => {
-          afficherTout();
-        }}
+          onClick={() => {
+            alert("cliqué");
+          }}
       >
         Tout
       </Button>
@@ -39,7 +44,7 @@ export default function Filtres(id, date, texte, complete, memos, setMemos, affi
             aria-label="afficher-completes"
             size="small"
         onClick={() => {
-          alert("clicked");
+          alert("cliqué");
         }}
       >
         Complétés
@@ -51,7 +56,7 @@ export default function Filtres(id, date, texte, complete, memos, setMemos, affi
           aria-label="afficher-actifs"
           size="small"
         onClick={() => {
-          alert("clicked");
+          alert("cliqué");
         }}
       >
         Actifs
@@ -63,7 +68,7 @@ export default function Filtres(id, date, texte, complete, memos, setMemos, affi
             aria-label="supprimer-completes"
             size="small"
         onClick={() => {
-          alert("clicked");
+          supprimerCompletes();
         }}
       >
         Supprimer complétés

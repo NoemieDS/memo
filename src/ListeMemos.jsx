@@ -1,9 +1,7 @@
 import "./ListeMemos.scss";
 import Memo from "./Memo";
 
-
 export default function ListeMemos({ memos, setMemos }) {
-
   /**
    * Supprime un mémo de la collection de mémos
    *
@@ -36,21 +34,6 @@ export default function ListeMemos({ memos, setMemos }) {
       })
     );
   }
-
-  /***************************************FILTRES***************************** */
-
-  /**
-   * Basculer un mémo compléter à "true"
-   *
-   * @param string id : identifiant du mémo
-   * return memo
-   */
- /*  function afficherTout(id, texte, timestamp, complete) {
-    setMemos(
-      memos.map((memo) =>
-  }
- */
-
 
   return memos.length > 0 ? (
     <section className="ListeMemos">

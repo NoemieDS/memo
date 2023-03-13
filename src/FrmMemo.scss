@@ -52,7 +52,8 @@
     transition: 200ms;
   }
 
-  .frm-memo-bouton:hover:after {
+  .frm-memo-bouton:hover:after,
+  .frm-memo-bouton:active:after {
     top: 0px;
     left: 0px;
   }
