@@ -6,23 +6,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.6rem 4rem;
+  padding: 1.5rem;
+  margin-top: 0.2rem;
 
   h1 {
-    font-size: clamp(1.3rem, -0.0385rem + 3vw, 2.6rem);
+    font-size: clamp(1.4rem, -0.0385rem + 3vw, 2.6rem);
     text-transform: uppercase;
     text-shadow: hsl(218deg, 17%, 22%) 0.06em 0.06em 0.06em;
     margin-top: 1.4rem;
+   
   }
 
   img {
     width: 60px;
     max-width: 100%;
     height: auto;
+    padding-top: 0.2rem;
+    margin-right: 0.8rem;
   }
 
   
   @media screen and (min-width: 992px) {
-    justify-content: space-evenly;
+    padding: 1rem 6rem;
+ 
   }
 }

@@ -25,8 +25,8 @@ export default function Memo({
           {dateM} <br/> à {' '} {heureM}
         </p>
         <IconButton
-          onClick={() => completerMemo(id)}
-          className={complete ? "memo-completer-masquer-bouton" : "memo-completer"} //Ne fonctionne pas, MUI suit pas condition
+          onClick={() => completerMemo(id)}className={complete ? "bouton-completer-vrai " : "memo-completer"} 
+          //Ne fonctionne pas, MUI suit pas condition
           aria-label="memo-completer"
           size="small"
         >

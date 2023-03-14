@@ -28,7 +28,7 @@
   .frm-memo-bouton {
     /* margin-top: 0.4rem; */
     margin-left: 1rem;
-    padding: 0.9rem 1rem 0.6rem;
+    padding: 0.9rem 1.1rem ;
     outline: 0;
     border-radius: 1.1rem 2%;
     border: 1px solid #125b6a;
@@ -42,58 +42,60 @@
     font-weight: bolder;
   }
 
-.frm-memo-bouton:after {
+  .frm-memo-bouton:after {
     content: "";
     background-color: #fde360;
-    border-radius: 2% 1.1rem ;
+    border-radius: 2% 1.1rem;
     width: 100%;
     z-index: -1;
     position: absolute;
     height: 100%;
     top: 7px;
     left: 7px;
-    transition: transform 200ms  border-radius 200ms;
-    animation: deplacer-bouton-fond 1.2s  infinite;
-  } 
-/* 
-  .frm-memo-bouton:hover:after,
-  .frm-memo-bouton:active:after {
-    top: 0px;
-    left: 0px;
-  } */
+    transition: transform 400ms;
+    animation: deplacer-bouton-fond 1.2s infinite;
+  }
 
-.frm-memo-bouton-anim {
-  animation: deplacer-bouton-fond 800ms forwards;
-}
+  .frm-memo-bouton-anim {
+    animation: deplacer-bouton-fond 800ms forwards;
+  }
 
   /*Animation pour remplacer le hover pour téléphone */
   @keyframes deplacer-bouton-fond {
     from,
     to {
       transform: translate(0, 0);
-      border-radius: 2% 1.1rem ;
+      border-radius: 2% 1.1rem;
     }
 
     50% {
       transform: translate(-7px, -7px);
       border-radius: 1.1rem 2%;
     }
-
   }
 
-  @media(hover: hover) and (pointer: fine) {
+/*   @media (hover: hover) and (pointer: fine) {
     .frm-memo-bouton:hover:after {
       top: 0px;
       left: 0px;
     }
-  }
+  } */
 
   @media screen and (min-width: 992px) {
     #input-memo[type="text"] {
       width: 60vw;
     }
-    .frm-memo-bouton {
+    /*  .frm-memo-bouton {
       display: none;
+    } */
+
+    .frm-memo-bouton:after {
+      animation: none;
+    }
+
+    .frm-memo-bouton:hover:after,
+    .frm-memo-bouton:active:after {
+      transform: translate(-7px, -7px);
     }
   }
 

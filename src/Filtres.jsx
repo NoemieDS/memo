@@ -23,6 +23,7 @@ export default function Filtres({id, date, texte, complete, memos, setMemos}) {
 
   return (
     <section className="Filtres">
+      <div className="bloc-grid">
       <h5>
         {nbTache} {nbTacheTexte}
       </h5>
@@ -71,8 +72,9 @@ export default function Filtres({id, date, texte, complete, memos, setMemos}) {
           supprimerCompletes();
         }}
       >
-        Supprimer complétés
+        X complétés
       </Button>
+      </div>
     </section>
   );
 }

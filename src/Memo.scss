@@ -22,7 +22,7 @@
 
     .memo-completer {
       padding: 0rem;
-      opacity: 1;
+      opacity: 0.6;
     }
     
     .memo-completer:hover,
@@ -30,10 +30,10 @@
       color: green;
     }
 
-    .memo-completer-masquer-bouton {
+    .bouton-completer-vrai {
       color: green;
-      transition: opacity 1s;
-      opacity: 0;
+      transition: color 800ms;
+      opacity: 0.9;
     }
   }
   
@@ -65,6 +65,13 @@
     display: flex;
     justify-content: flex-start;
 
+    .memo-supprimer {
+    width: 12%;
+      opacity: 0.4;
+      transition: color 800ms;
+      padding-left: 0.5rem;
+    }
+    
     .memo-supprimer:hover,
     .memo-supprimer:active {
       color: red;
@@ -72,7 +79,7 @@
   }
 
   .memo-completer-texte {
-    color: rgba(0, 128, 0, 0.5);
+    color: rgba(0, 128, 0, 0.7);
     text-decoration: line-through;
   }
   
