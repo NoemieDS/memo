@@ -22,7 +22,7 @@ export default function Appli({}) {
   /*
    **************************  Initialisation d'un état React pour les boutons de filtres
    */
-  const [filtrerMemos, setFiltrerMemos] = useState("tout");
+  const [filtrerMemos, setFiltrerMemos] = useState();
 
   return (
     <div className="Appli">

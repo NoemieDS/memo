@@ -40,10 +40,11 @@ export default function ListeMemos({
     );
   }
 
+
   return memos.length > 0 ? (
     <section className="ListeMemos">
 {/* On filtre selon la variable d'état des boutons cliqués */}
-{   filtrerMemos ?    filtrerMemos.map((memo)=> {
+{   filtrerMemos ?  filtrerMemos.map((memo)=> {
             return (
               <Memo
           key={memo.id}
