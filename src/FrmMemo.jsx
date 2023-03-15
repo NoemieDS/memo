@@ -1,12 +1,12 @@
 import "./FrmMemo.scss";
 import Memo from "./Memo";
 import { useState } from "react";
-export default function FrmMemo({ memos, setMemos }) {
 
-  
+
+export default function FrmMemo({ memos, setMemos }) {
+ 
  /*
- **************************  Initialisation d'un état React pour le texte saisi 
- * du formulaire
+ ************** Initialisation d'un état React pour le texte saisi du formulaire
 */
   const [texte, setTexte] = useState("");
 
@@ -36,7 +36,6 @@ export default function FrmMemo({ memos, setMemos }) {
       setMemos([
         ...memos,
         {
-          /*   key: key, */
           id: id,
           date: timestamp,
           texte: texte,
@@ -45,6 +44,7 @@ export default function FrmMemo({ memos, setMemos }) {
       ]);
     }
     evt.target.reset();
+    setTexte();
   }
 
 
@@ -55,7 +55,6 @@ export default function FrmMemo({ memos, setMemos }) {
           type="text"
           id="input-memo"
           name="input-memo"
-        
           autoFocus
           autoComplete="off"
           placeholder="Je veux me rappeler de..."

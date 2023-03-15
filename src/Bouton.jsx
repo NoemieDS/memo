@@ -4,44 +4,33 @@ import "./Bouton.scss";
 export default function Bouton({
   memos,
   setMemos,
-  filtrerMemos,
-  setFiltrerMemos,
+  filtreMemos,
+  setFiltreMemos,
   filtre,
 }) {
-  function filtrerLesMemos() {
-    if (filtre === "complétés") {
-      afficherMemoComplete();
-    } 
-    else if (filtre === "actifs") {
-      afficherMemoActif();
-    } 
-    else if (filtre === "supprimer complétés") {
-      supprimerTousMemosCompletes();
-    } else {
-      setFiltrerMemos();
-    }
-  }
 
   /*
-   ************************** Supprimer tous les mémos complétés **********************
+   ************************** Filtrer et Supprimer tous les mémos complétés *****
    */
 
-  function supprimerTousMemosCompletes(idd) {
-    setMemos(memos.filter((memo) => memo.complete == false));
-  }
-
-  function afficherMemoActif() {
-    setFiltrerMemos(memos.filter((memo) => memo.complete === false));
-  }
-
-  function afficherMemoComplete() {
-    setFiltrerMemos(memos.filter((memo) => memo.complete === true));
+  function filtrerLesMemos() {
+    if (filtre === "complétés") {
+      setFiltreMemos(memos.filter((memo) => memo.complete === true));
+    } 
+    else if (filtre === "actifs") {
+      setFiltreMemos(memos.filter((memo) => memo.complete === false));
+    } 
+    else if (filtre === "supprimer complétés") {
+      setMemos(memos.filter((memo) => memo.complete == false));
+    } else {
+      setFiltreMemos();
+    }
   }
 
   return (
     <Button
       variant="contained"
-      className={
+      className= {
         filtre === "supprimer complétés"
           ? "filtre-bouton filtre-supprimer"
           : "filtre-bouton"

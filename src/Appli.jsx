@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function Appli({}) {
   /*
-   **************************  Lire les mémos dans le localStorage ou initié un []
+   *****************************  Lire les mémos dans le localStorage ou initié un []
    */
   const [memos, setMemos] = useState(
     () => JSON.parse(localStorage.getItem("mes-memos")) || []
@@ -22,7 +22,7 @@ export default function Appli({}) {
   /*
    **************************  Initialisation d'un état React pour les boutons de filtres
    */
-  const [filtrerMemos, setFiltrerMemos] = useState();
+  const [filtreMemos, setFiltreMemos] = useState();
 
   return (
     <div className="Appli">
@@ -32,15 +32,15 @@ export default function Appli({}) {
         <Filtres
           memos={memos}
           setMemos={setMemos}
-          filtrerMemos={filtrerMemos}
-          setFiltrerMemos={setFiltrerMemos}
+          filtreMemos={filtreMemos}
+          setFiltreMemos={setFiltreMemos}
         />
         <div className="defiler">
           <ListeMemos
             memos={memos}
             setMemos={setMemos}
-            filtrerMemos={filtrerMemos}
-            setFiltrerMemos={setFiltrerMemos}
+            filtreMemos={filtreMemos}
+            setFiltreMemos={setFiltreMemos}
           />
         </div>
       </main>

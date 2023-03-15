@@ -4,9 +4,12 @@ import Memo from "./Memo";
 export default function ListeMemos({
   memos,
   setMemos,
-  filtrerMemos,
-  setFiltrerMemos,
-  filtrerLesMemos
+  filtreMemos,
+  setFiltreMemos,
+  id, 
+  date, 
+  texte, 
+  complete
 }) {
   /**
    * Supprime un mémo de la collection de mémos
@@ -16,6 +19,7 @@ export default function ListeMemos({
    */
   function supprimerMemo(idd) {
     setMemos(memos.filter((memo) => memo.id !== idd));
+    setFiltreMemos(memos.filter((memo) => memo.id !== idd));
   }
 
   /**
@@ -38,13 +42,27 @@ export default function ListeMemos({
         return memo;
       })
     );
+   /*  setFiltreMemos(
+      memos.map((memo) => {
+        if (memo.id === id) {
+          return {
+            id: memo.id,
+            date: memo.date,
+            texte: memo.texte,
+            complete: true,
+          };
+        }
+        return memo;
+      })
+    ); */
   }
 
 
   return memos.length > 0 ? (
+ 
     <section className="ListeMemos">
 {/* On filtre selon la variable d'état des boutons cliqués */}
-{   filtrerMemos ?  filtrerMemos.map((memo)=> {
+{   filtreMemos ?  filtreMemos.map((memo)=> {
             return (
               <Memo
           key={memo.id}
