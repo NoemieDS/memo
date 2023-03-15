@@ -22,7 +22,7 @@
 
     .memo-completer {
       padding: 0rem;
-      opacity: 0.6;
+      opacity: 0.7;
     }
     
     .memo-completer:hover,
@@ -67,14 +67,14 @@
 
     .memo-supprimer {
     width: 12%;
-      opacity: 0.4;
-      transition: color 800ms;
-      padding-left: 0.5rem;
+      opacity: 0.5;
+      transition: color 400ms opacity 400ms;
     }
     
     .memo-supprimer:hover,
     .memo-supprimer:active {
       color: red;
+      opacity: 1;
     }
   }
 

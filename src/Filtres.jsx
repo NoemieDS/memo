@@ -1,80 +1,106 @@
 import "./Filtres.scss";
+import Bouton from "./Bouton";
 import Button from "@mui/material/Button";
 
-export default function Filtres({id, date, texte, complete, memos, setMemos}) {
+export default function Filtres({
+  filtrerMemos,
+  setFiltrerMemos,
+  memos,
+  setMemos
+}) {
 
-  var nbTache = 0; //utiliser filter ?
-  var nbTacheTexte = "";
+/*
+ ************************** Afficher les mémos actifs ******************************
+*/
 
-  afficherNbTacheActive();
-  function afficherNbTacheActive() {
-    if (nbTache <= 1) {
-      nbTacheTexte = "mémo actif";
-    } else if (nbTache > 1) {
-      nbTacheTexte = "mémoss actifs";
-    }
-    return nbTacheTexte;
-  }
-
-  function supprimerCompletes() {
-    alert("cliqué");
-  }
+let nbMemo = memos.filter((memo) => memo.complete == false);
+let nbMemoTxt = nbMemo.length;
 
 
   return (
     <section className="Filtres">
-      <div className="bloc-grid">
-      <h5>
-        {nbTache} {nbTacheTexte}
-      </h5>
-      <Button
+        <h5>
+        {nbMemoTxt} {(nbMemoTxt <= 1) ? "mémo actif" : "mémos actifs"}
+        </h5>
+        <Bouton
+          memos={memos}
+          setMemos={setMemos}
+          setFiltrerMemos={setFiltrerMemos}
+          filtrerMemos={filtrerMemos}
+          filtre={"tout"}
+        />
+        <Bouton
+          memos={memos}
+          setMemos={setMemos}
+          setFiltrerMemos={setFiltrerMemos}
+          filtrerMemos={filtrerMemos}
+          filtre={"complétés"}
+        />
+        <Bouton
+          memos={memos}
+          setMemos={setMemos}
+          setFiltrerMemos={setFiltrerMemos}
+          filtrerMemos={filtrerMemos}
+          filtre={"actifs"}
+        />
+
+      <Bouton
+          memos={memos}
+          setMemos={setMemos}
+          setFiltrerMemos={setFiltrerMemos}
+          filtrerMemos={filtrerMemos}
+          filtre={"supprimer complétés"}
+        />
+       
+        {/*   <Button
         variant="contained"
         className="filtre-bouton"
           aria-label="afficher-tout"
           size="small"
+          filtre = {'tout'}
           onClick={() => {
-            alert("cliqué");
+            setFiltrerMemos("tout")
           }}
       >
         Tout
-      </Button>
-
-      <Button
+      </Button> */}
+        {/* <Bouton memos = {memos} setFiltrerMemos = {setFiltrerMemos} filtre = {'supprimer complétés'}/>
+         */}
+        {/*   <Button
           variant="contained"
           className="filtre-bouton"
             aria-label="afficher-completes"
             size="small"
         onClick={() => {
-          alert("cliqué");
+          setFiltrerMemos("completes")
         }}
       >
         Complétés
-      </Button>
+      </Button> */}
 
-      <Button
+        {/*   <Button
          variant="contained"
         className="filtre-bouton"
           aria-label="afficher-actifs"
           size="small"
         onClick={() => {
-          alert("cliqué");
+          setFiltrerMemos("actifs")
         }}
       >
         Actifs
-      </Button>
+      </Button> */}
 
-      <Button
-         variant="contained"
+    {/*   <Button
+          variant="contained"
           className="filtre-bouton filtre-supprimer"
-            aria-label="supprimer-completes"
-            size="small"
-        onClick={() => {
-          supprimerCompletes();
-        }}
-      >
-        X complétés
-      </Button>
-      </div>
+          aria-label="supprimer-completes"
+          size="small"
+          onClick={() => {
+            supprimerTousMemosCompletes(id);
+          }}
+        >
+          Supprimer complétés
+        </Button> */}
     </section>
   );
 }

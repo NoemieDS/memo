@@ -3,6 +3,11 @@ import Memo from "./Memo";
 import { useState } from "react";
 export default function FrmMemo({ memos, setMemos }) {
 
+  
+ /*
+ **************************  Initialisation d'un état React pour le texte saisi 
+ * du formulaire
+*/
   const [texte, setTexte] = useState("");
 
   /**
@@ -14,7 +19,6 @@ export default function FrmMemo({ memos, setMemos }) {
    * @param {boolean} memo.complete - Si la tâche est complétée ou non (false par défaut).
    */
   function ajouterMemo(evt) {
-   
     /* On empêche la page de rafraichir */
     evt.preventDefault();
     /* Un mémo */

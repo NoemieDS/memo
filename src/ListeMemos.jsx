@@ -1,7 +1,13 @@
 import "./ListeMemos.scss";
 import Memo from "./Memo";
 
-export default function ListeMemos({ memos, setMemos }) {
+export default function ListeMemos({
+  memos,
+  setMemos,
+  filtrerMemos,
+  setFiltrerMemos,
+  filtrerLesMemos
+}) {
   /**
    * Supprime un mémo de la collection de mémos
    *
@@ -19,7 +25,7 @@ export default function ListeMemos({ memos, setMemos }) {
    * return memo
    */
   function completerMemo(id, texte, timestamp, complete) {
-    setMemos(
+     setMemos(
       memos.map((memo) => {
         if (memo.id === id) {
           return {
@@ -29,7 +35,6 @@ export default function ListeMemos({ memos, setMemos }) {
             complete: true,
           };
         }
-
         return memo;
       })
     );
@@ -37,14 +42,27 @@ export default function ListeMemos({ memos, setMemos }) {
 
   return memos.length > 0 ? (
     <section className="ListeMemos">
-      {memos.map((memo) => (
+{/* On filtre selon la variable d'état des boutons cliqués */}
+{   filtrerMemos ?    filtrerMemos.map((memo)=> {
+            return (
+              <Memo
+          key={memo.id}
+          {...memo}
+          supprimerMemo={supprimerMemo}
+          completerMemo={completerMemo}
+        />
+            )
+          }) :
+
+     memos.map((memo) => (
         <Memo
           key={memo.id}
           {...memo}
           supprimerMemo={supprimerMemo}
           completerMemo={completerMemo}
         />
-      ))}
+      ))} 
+
     </section>
   ) : (
     <div>

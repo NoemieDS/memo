@@ -6,7 +6,7 @@
   height: 14vh;
   background-color: #125b6a;
   text-align: center;
-  text-shadow: hsl(215, 16%, 21%) 0.1em 0.1em 0.2em;
+  text-shadow: hsl(215, 16%, 21%) -0.1em -0.1em 0.2em;
   color:#f2e9d8;
   padding-top: 0.4rem;
  
@@ -18,10 +18,10 @@
   .filtre-bouton {
    /* background-color:#028090; */
    color: black;
-/*    font-weight: bold; */
+   font-weight: bolder;
    font-size: 0.6rem;
-   text-shadow: hsl(215, 16%, 21%) 0.1em 0.1em 0.2em;
-   box-shadow: -5px -5px -7px rgba(33, 33, 33, 0.7);
+   text-shadow: hsl(215, 16%, 71%) -0.1em -0.1em 0.2em;
+   box-shadow: -2px -2px 5px rgba(33, 33, 33, 0.7);
    margin: 0.2rem 0.3rem;
    padding: 0.4rem;
   }
@@ -31,7 +31,8 @@
     display: block;
     margin: 0 auto;
     color:#f2e9d8;
-
+    text-shadow: hsl(215, 16%, 21%) -0.1em -0.1em 0.2em;
+    font-weight: bolder;
     margin-top: 0.2rem;
   }
 
