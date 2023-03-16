@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  animation: apparition-memo-ani 1s forwards;
 
   .memo-haut {
     width: 100%;
@@ -18,28 +19,29 @@
 
     .memo-date {
       font-size: 0.76rem;
+      transition: color 800ms;
     }
 
-    .memo-completer {
+    .memo-completer-bt {
       padding: 0rem;
       opacity: 0.7;
     }
     
-    .memo-completer:hover,
-    .memo-completer:active {
-      color: green;
+    .memo-completer-bt:hover,
+    .memo-completer-bt:active {
+      color:  rgba(0, 128, 0, 1);
     }
 
-    .bouton-completer-vrai {
-      color: green;
-      transition: color 800ms;
+    .bouton-completer-bt-vrai {
+      color:  rgba(0, 128, 0, 1);
+      transition: color 800ms text-decoration 400ms;
       opacity: 0.9;
     }
   }
   
   .memo-date,
-  .memo-completer,
-  .memo-supprimer {
+  .memo-completer-bt,
+  .memo-supprimer-bt {
     margin: 0.6rem;
     padding: 0rem;
   }
@@ -54,7 +56,18 @@
     box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.7);
     white-space: pre-wrap;
     word-wrap: break-word;
+    transition: background-color 2s text-decoration 400ms;
 
+    @keyframes apparition-memo-ani {
+      from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+    }
+    
     @media screen and (min-width: 992px) {
       padding: 1.8rem 1.8rem 2.2rem 1.8rem;
     }
@@ -65,28 +78,29 @@
     display: flex;
     justify-content: flex-start;
 
-    .memo-supprimer {
+    .memo-supprimer-bt {
     width: 12%;
       opacity: 0.5;
       transition: color 400ms opacity 400ms;
     }
     
-    .memo-supprimer:hover,
-    .memo-supprimer:active {
+    .memo-supprimer-bt:hover,
+    .memo-supprimer-bt:active {
       color: red;
       opacity: 1;
     }
   }
 
   .memo-completer-texte {
-    color: rgba(0, 128, 0, 0.7);
+    background-color: rgba(6, 168, 116, 0.6);
     text-decoration: line-through;
   }
-  
-/*   .MuiIconButton-root:not(.memo-supprimer) {
-    color: green !important;
-   }  */
-   
+
+  .memo-completer-date {
+    color: rgba(0, 128, 0, 1);
+    text-decoration: line-through;
+  }
+
 }
 
 .Memo:hover,
@@ -95,3 +109,5 @@
   transform: scale(1.25);
   z-index: 100;
 }
+
+

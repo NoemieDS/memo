@@ -1,5 +1,4 @@
 import "./FrmMemo.scss";
-import Memo from "./Memo";
 import { useState } from "react";
 
 

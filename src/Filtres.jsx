@@ -1,6 +1,5 @@
 import "./Filtres.scss";
 import Bouton from "./Bouton";
-import Button from "@mui/material/Button";
 
 export default function Filtres({
   filtreMemos,
@@ -12,7 +11,6 @@ export default function Filtres({
 /*
  ************************** Afficher les mémos actifs ******************************
 */
-
 let nbMemo = memos.filter((memo) => memo.complete == false);
 let nbMemoTxt = nbMemo.length;
 

@@ -8,11 +8,93 @@
 
   @media screen and (min-width: 992px) {
     gap: 3rem;
-  } 
+  }
 
   @media screen and (min-width: 1400px) {
     gap: 4rem;
-  } 
+  }
 }
+
+div .aucun-memo {
+
+    padding: 1.6rem;
+    font-size: clamp(2.4rem, 4vw, 6rem);
+    animation: deplacer-aucun-memo 1s infinite;
+}
+
+/*Animation pour remplacer le hover pour téléphone */
+@keyframes deplacer-aucun-memo {
+  from,
+  to {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-7px, -7px);
+  }
+}
+
+.aucun-memo {
+    margin: 0;
+    font-size: clamp(2rem, 1rem, 3rem);
+    font-weight: 700;
+   
+   .aucun-memo span {
+    display: inline-block;
+  }
   
+  @keyframes aucun-memo-anim {
+    from {
+      transform: rotateY(90deg);
+      color: #060606;
+    }
+  
+    50% {
+      transform: rotateY(0deg);
+      color: #2376d2;
+    }
+
+    to {
+      transform: rotateY(0deg);
+      color: #060606;
+    }
+  }
+  
+}
+
+.aucun-memo span:nth-child(1) {
+  animation: aucun-memo-anim 5s ease-out infinite;
+}
+
+.aucun-memo span:nth-child(2) {
+  animation: aucun-memo-anim 5s 300ms ease-out infinite;
+}
+
+.aucun-memo span:nth-child(3) {
+  animation: aucun-memo-anim 5s 600ms ease-out infinite;
+}
+
+.aucun-memo span:nth-child(4) {
+  animation: aucun-memo-anim 5s 900ms ease-out infinite;
+}
+
+.aucun-memo span:nth-child(5) {
+  animation: aucun-memo-anim 5s 1.2s ease-out infinite;
+}
+
+.aucun-memo span:nth-child(6) {
+  animation: aucun-memo-anim 5s 1.5s ease-out infinite;
+}
+.aucun-memo span:nth-child(7) {
+  animation: aucun-memo-anim 5s 1.8s ease-out infinite;
+}
+.aucun-memo span:nth-child(8) {
+  animation: aucun-memo-anim 5s 2.1s ease-out infinite;
+}
+.aucun-memo span:nth-child(9) {
+  animation: aucun-memo-anim 5s 2.4s ease-out infinite;
+}
+.aucun-memo span:nth-child(10) {
+  animation: aucun-memo-anim 5s 2.7s ease-out infinite;
+}
 

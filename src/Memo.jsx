@@ -20,12 +20,12 @@ export default function Memo({
   return (
     <article className="Memo">
       <div className="memo-haut">
-        <p className={complete ? "memo-date memo-completer-texte" : "memo-date"} >
+        <p className={complete ? "memo-date memo-completer-date" : "memo-date"} >
 
           {dateM} <br/> à {' '} {heureM}
         </p>
         <IconButton
-          onClick={() => completerMemo(id)}className={complete ? "bouton-completer-vrai " : "memo-completer"} 
+          onClick={() => completerMemo(id)}className={complete ? "bouton-completer-bt-vrai " : "memo-completer-bt"} 
           //Ne fonctionne pas, MUI suit pas condition
           aria-label="memo-completer"
           size="small"
@@ -39,7 +39,7 @@ export default function Memo({
       <div className="memo-bas">
         <IconButton
           onClick={() => supprimerMemo(id)}
-          className="memo-supprimer"
+          className="memo-supprimer-bt"
           aria-label="memo-supprimer"
           size="small"
         >

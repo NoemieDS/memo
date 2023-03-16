@@ -1,5 +1,9 @@
 import Button from "@mui/material/Button";
-import "./Bouton.scss";
+/* import "./Bouton.scss"; */ 
+/* Mon scss ne s'appliquant pas vraiment sur les boutons (ni la couleur,
+  ni le padding, etc, j'ai laissé les classes dans le 
+  fichier Filtres.jsx. J'avais commencé mon travail sans de component
+  Bouton mais en cours de route, je ne voyais pas comment faire*/
 
 export default function Bouton({
   memos,
