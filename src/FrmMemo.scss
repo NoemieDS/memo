@@ -26,7 +26,6 @@
   }
 
   .frm-memo-bouton {
-    /* margin-top: 0.4rem; */
     margin-left: 1rem;
     padding: 0.9rem 1.1rem ;
     outline: 0;
@@ -74,20 +73,10 @@
     }
   }
 
-/*   @media (hover: hover) and (pointer: fine) {
-    .frm-memo-bouton:hover:after {
-      top: 0px;
-      left: 0px;
-    }
-  } */
-
   @media screen and (min-width: 992px) {
     #input-memo[type="text"] {
       width: 60vw;
     }
-    /*  .frm-memo-bouton {
-      display: none;
-    } */
 
     .frm-memo-bouton:after {
       animation: none;

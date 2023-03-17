@@ -46,7 +46,6 @@ export default function FrmMemo({ memos, setMemos }) {
     setTexte();
   }
 
-
   return (
     <section className="FrmMemo">
       <form onSubmit={ajouterMemo} id="frmMemo">

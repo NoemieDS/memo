@@ -1,9 +1,8 @@
 import Button from "@mui/material/Button";
-/* import "./Bouton.scss"; */ 
-/* Mon scss ne s'appliquant pas vraiment sur les boutons (ni la couleur,
-  ni le padding, etc, j'ai laissé les classes dans le 
-  fichier Filtres.jsx. J'avais commencé mon travail sans de component
-  Bouton mais en cours de route, je ne voyais pas comment faire*/
+/* import "./Bouton.scss"; */
+/* Le scss ne s'appliquant pas correctement sur les boutons (ni la couleur,
+  ni le padding, etc, les classes sont dans le 
+  fichier Filtres.jsx.*/
 
 export default function Bouton({
   memos,
@@ -12,7 +11,6 @@ export default function Bouton({
   setFiltreMemos,
   filtre,
 }) {
-
   /*
    ************************** Filtrer et Supprimer tous les mémos complétés *****
    */
@@ -20,11 +18,9 @@ export default function Bouton({
   function filtrerLesMemos() {
     if (filtre === "complétés") {
       setFiltreMemos(memos.filter((memo) => memo.complete === true));
-    } 
-    else if (filtre === "actifs") {
+    } else if (filtre === "actifs") {
       setFiltreMemos(memos.filter((memo) => memo.complete === false));
-    } 
-    else if (filtre === "supprimer complétés") {
+    } else if (filtre === "supprimer complétés") {
       setMemos(memos.filter((memo) => memo.complete == false));
     } else {
       setFiltreMemos();
@@ -34,7 +30,7 @@ export default function Bouton({
   return (
     <Button
       variant="contained"
-      className= {
+      className={
         filtre === "supprimer complétés"
           ? "filtre-bouton filtre-supprimer"
           : "filtre-bouton"

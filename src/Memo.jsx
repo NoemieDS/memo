@@ -12,7 +12,6 @@ export default function Memo({
   supprimerMemo,
  }) {
 
-
   /* Variables pour les dates et les heures */
   const dateM = new Date(date).toLocaleDateString('fr-CA', {dateStyle: 'long',});
   const heureM = new Date(date).toLocaleTimeString('fr-CA', {hour: '2-digit', minute:'2-digit'})
@@ -25,8 +24,8 @@ export default function Memo({
           {dateM} <br/> à {' '} {heureM}
         </p>
         <IconButton
-          onClick={() => completerMemo(id)}className={complete ? "bouton-completer-bt-vrai " : "memo-completer-bt"} 
-          //Ne fonctionne pas, MUI suit pas condition
+          onClick={() => completerMemo(id)}
+          className={complete ? "bouton-completer-bt-vrai " : "memo-completer-bt"} 
           aria-label="memo-completer"
           size="small"
         >
@@ -38,8 +37,8 @@ export default function Memo({
       </h4>
       <div className="memo-bas">
         <IconButton
-          onClick={() => supprimerMemo(id)}
-          className="memo-supprimer-bt"
+          onClick={() => supprimerMemo(id)} 
+          className={complete ? "memo-supprimer-bt .memo-supprimer" : "memo-supprimer-bt"} 
           aria-label="memo-supprimer"
           size="small"
         >
