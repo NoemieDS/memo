@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  animation: apparition-memo-ani 1s forwards;
+  animation: apparition-memo-ani 800ms forwards;
 
   @keyframes apparition-memo-ani {
     from {
@@ -29,12 +29,13 @@
 
     .memo-date {
       font-size: 0.76rem;
-      transition: color 800ms;
+      transition: color 600ms text-decoration 1s;;
     }
 
     .memo-completer-bt {
       padding: 0rem;
       opacity: 0.7;
+      transition: color 600ms opacity 800ms;
     }
     
     .memo-completer-bt:hover,
@@ -44,7 +45,6 @@
 
     .bouton-completer-bt-vrai {
       color:  rgba(0, 128, 0, 1);
-      transition: color 1s text-decoration 1s;
       opacity: 0.9;
     }
   }
@@ -67,7 +67,7 @@
     white-space: pre-wrap;
     word-wrap: break-word;
     transition: background-color 2s text-decoration 1s;
- 
+
     @media screen and (min-width: 992px) {
       padding: 1.8rem 1.8rem 2.2rem 1.8rem;
     }
@@ -91,7 +91,7 @@
     }
   }
 
-  .memo-supprimer {
+    .memo-supprimer {
     animation: disparition-memo-ani 1s;
   }
 

@@ -64,10 +64,12 @@ export default function ListeMemos({ memos, setMemos, filtreMemos }) {
       <span>c</span>
       <span>u</span>
       <span>n</span> 
+      {" "}
       <span>M</span>
       <span>é</span>
       <span>m</span>
       <span>o</span> 
+      {" "}
       <span>!</span>
     </div>
   );

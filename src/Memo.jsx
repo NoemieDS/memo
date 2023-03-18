@@ -38,7 +38,8 @@ export default function Memo({
       <div className="memo-bas">
         <IconButton
           onClick={() => supprimerMemo(id)} 
-          className={complete ? "memo-supprimer-bt .memo-supprimer" : "memo-supprimer-bt"} 
+          /*Je ne suis pas arrivée à utiliser un setTimeOut, les classes ne s'appliquent donc pas*/
+          className={complete ? "memo-supprimer-bt memo-supprimer" : "memo-supprimer-bt"} 
           aria-label="memo-supprimer"
           size="small"
         >
