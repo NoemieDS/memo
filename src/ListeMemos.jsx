@@ -18,20 +18,16 @@ export default function ListeMemos({ memos, setMemos, filtreMemos }) {
    * @param string id : identifiant du mémo
    * return memo
    */
+
   function completerMemo(id, texte, timestamp, complete) {
     setMemos(
-      memos.map((memo) => {
-        if (memo.id === id) {
-          return {
-            id: memo.id,
-            date: memo.date,
-            texte: memo.texte,
-            complete: true,
-          };
+      memos.map(memo => {
+        if(memo.id === id) {
+          memo.complete = !memo.complete;
         }
         return memo;
       })
-    );
+    )
   }
 
   return memos.length > 0 ? (

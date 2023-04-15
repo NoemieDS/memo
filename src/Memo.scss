@@ -46,6 +46,7 @@
     .bouton-completer-bt-vrai {
       color:  rgba(0, 128, 0, 1);
       opacity: 0.9;
+      transition: color 600ms opacity 800ms;
     }
   }
   
@@ -91,9 +92,9 @@
     }
   }
 
-    .memo-supprimer {
+  /* .memo-supprimer {
     animation: disparition-memo-ani 1s;
-  }
+  } */
 
   @keyframes disparition-memo-ani {
     from {
