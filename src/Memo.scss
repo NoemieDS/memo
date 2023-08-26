@@ -1,5 +1,5 @@
 .Memo {
-  background-color: #eddf9a;
+  background-color: rgba(281, 227, 94, 0.8);
   min-width: 240px;
   max-width: 90vw;
   border-radius: 1% 20px;
@@ -60,11 +60,12 @@
   .un-memo {
     margin: 0.2rem 1.4rem;
     width: 90%;
-    background-color: #f2e9d8;
+    background-color: rgba(253, 227, 96, 0.7);
     text-align: center;
     padding: 1rem 1rem 1.6rem 1rem;
     border-radius: 1% 10px 1% 10px;
-    box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.7);
+    border: 1px dotted #125b6a;
+  /*  box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.7);*/
     white-space: pre-wrap;
     word-wrap: break-word;
     transition: background-color 2s text-decoration 1s;

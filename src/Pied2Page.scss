@@ -2,13 +2,15 @@
   width: 100%;
   position: fixed;
   bottom: 0vh;
-  height: 3.6vh;
-  background-color: #028090;
+  height: 3.4vh;
+  background-color: hsla(213, 15%, 14%, 0.1);
+  /*background-color: #028090;*/
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: hsl(218deg, 17%, 42%) 0.1em 0.1em 0.2em;
+ // text-shadow: hsl(217, 31%, 80%) 0.1em 0.1em 0.2em;
   font-size: 0.8rem;
+  color: rgb(160, 164, 186);
 
   @media screen and (min-width: 992px) {
     font-size: 0.9rem;
