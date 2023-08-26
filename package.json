@@ -1,6 +1,6 @@
 {
   "name": "tp1-memo",
-  "homepage": "https://NoemieDS.github.io/memo/",
+  "homepage-off": "https://NoemieDS.github.io/memo/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
